@@ -9,4 +9,4 @@
 * (done) use body parser to parse incoming bodys from post requests
 * (done) see if on onload event will work when closing a window
 * (done) closing the window will result in the node process being killed also
-* rename test.js to kill-process.js
+* (done) rename test.js to kill-process.js

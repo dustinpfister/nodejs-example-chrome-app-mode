@@ -13,23 +13,23 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 // public js folder
 app.use('/js', express.static('public/js'));
-// root path
+// root / GET requests
 app.get('/', (req, res) => {
     res.render('index',{});
 });
+// root / POST requests
 app.use(require('body-parser').json());
 app.post('/', (req, res) => {
     console.log('post request');
     console.log(req.body);
-
+    // kill process if action === 'kill'
     if(req.body){
        if(req.body.action === 'kill'){
            process.exit(0);
        }
     }
-
     res.json({
-        action: 'okay'
+        mess: 'okay'
     });
 });
 // start express app on port and start chrome child process
