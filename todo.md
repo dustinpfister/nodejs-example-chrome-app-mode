@@ -6,5 +6,6 @@
 * (done) have a /js path for the web app
 * (done) add a http client to /js* path
 * (done) have a post hander in index.js
-* use body parser to parse incoming bodys from post requests
+* (done) use body parser to parse incoming bodys from post requests
+* (done) see if on onload event will work when closing a window
 * closing the window will result in the node process being killed also

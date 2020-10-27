@@ -11,3 +11,15 @@ axios.post('/', {
   .catch(function (error) {
     
   });
+
+window.addEventListener('unload', function(){
+   axios.post('/', {
+    action: 'kill'
+  })
+  .then(function (response) {
+    
+  })
+  .catch(function (error) {
+    
+  });
+});
