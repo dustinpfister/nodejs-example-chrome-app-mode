@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/dustinpfister/nodejs-example-chrome-app-mode/issues"
   },
-  "homepage": "https://github.com/dustinpfister/nodejs-example-chrome-app-mode#readme"
+  "homepage": "https://github.com/dustinpfister/nodejs-example-chrome-app-mode#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
