@@ -15,8 +15,13 @@ app.set('view engine', 'ejs');
 app.use('/js', express.static('public/js'));
 // root path
 app.get('/', (req, res) => {
-    //res.send('foo');
     res.render('index',{});
+});
+app.post('/', (req, res) => {
+    console.log('post request');
+    res.json({
+        action: 'okay'
+    });
 });
 // start express app on port and start chrome child process
 app.listen(port, function () {
