@@ -17,8 +17,10 @@ app.use('/js', express.static('public/js'));
 app.get('/', (req, res) => {
     res.render('index',{});
 });
+app.use(require('body-parser').json());
 app.post('/', (req, res) => {
     console.log('post request');
+    console.log(req.body);
     res.json({
         action: 'okay'
     });
