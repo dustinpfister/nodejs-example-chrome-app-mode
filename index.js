@@ -13,14 +13,21 @@ app.get('/', (req, res) => {
 });
 // start express app on port and start chrome child process
 app.listen(port, function () {
- 
     console.log('nodejs express app is up on port: ' + port);
-
     // start chrome in app mode
     let com = 'chromium-browser --app=' + appURL + ' --new-window';
     console.log('starting chrome in app mode');
     console.log(com);
+    // the chrome child
     let chromeChild = exec(com, {
         cwd: process.cwd()
     });
+    chromeChild.stdout.on('data', (data) => {
+        console.log(data);
+    });
+    // on exit of chrome child kill this process
+    chromeChild.on('exit', () => {
+        console.log('cromeChild exit');
+        //process.exit();
+    })
 });
