@@ -8,4 +8,5 @@
 * (done) have a post hander in index.js
 * (done) use body parser to parse incoming bodys from post requests
 * (done) see if on onload event will work when closing a window
-* closing the window will result in the node process being killed also
+* (done) closing the window will result in the node process being killed also
+* rename test.js to kill-process.js
