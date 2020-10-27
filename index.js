@@ -11,6 +11,8 @@ app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+// public js folder
+app.use('/js', express.static('public/js'));
 // root path
 app.get('/', (req, res) => {
     //res.send('foo');
