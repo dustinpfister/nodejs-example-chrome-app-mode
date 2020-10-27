@@ -21,6 +21,13 @@ app.use(require('body-parser').json());
 app.post('/', (req, res) => {
     console.log('post request');
     console.log(req.body);
+
+    if(req.body){
+       if(req.body.action === 'kill'){
+           process.exit(0);
+       }
+    }
+
     res.json({
         action: 'okay'
     });
